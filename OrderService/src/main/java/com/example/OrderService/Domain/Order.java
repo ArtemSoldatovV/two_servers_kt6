@@ -1,6 +1,11 @@
 package com.example.OrderService.Domain;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Order {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String id;
     String name;
     String date_added;

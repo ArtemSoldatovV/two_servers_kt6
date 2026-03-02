@@ -1,6 +1,11 @@
 package com.example.UserService.Domain;
 
+import jakarta.persistence.*;
+
+@Entity
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     String id;
     String name;
     String password;
